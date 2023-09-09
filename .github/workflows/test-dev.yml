@@ -3,10 +3,10 @@ name: Tests
 on:
   pull_request:
     branches:
-      - staging
+      - test
 
 jobs:
   cypress-tests:
     uses: ./.github/workflows/test.yml
     with:
-      envName: staging
+      envName: dev

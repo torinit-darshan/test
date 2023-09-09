@@ -1,23 +1,27 @@
 name: Tests
 
 on:
-  pull_request:
-    branches:
-      - test
+  workflow_call:
+    inputs:
+      envName:
+        required: true
+        type: string
+
+env:
+  REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
+  CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
+  CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
 
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
-    environment: dev
-    env:
-      REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
-      CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
-      CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
+    environment:
+      name: ${{ inputs.envName }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      
+
       - name: Use variables
         run: |
           echo "CYPRESS_BASE_URL : $CYPRESS_BASE_URL"
