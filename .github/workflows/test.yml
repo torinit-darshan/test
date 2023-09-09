@@ -19,10 +19,6 @@ jobs:
           echo "CYPRESS_BASE_URL : $CYPRESS_BASE_URL"
           echo "CYPRESS_TEST_ENV : $CYPRESS_TEST_ENV"
           echo "REACT_APP_HEAD_TEXT : $REACT_APP_HEAD_TEXT"
-        env:
-          CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
-          CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
-          REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
