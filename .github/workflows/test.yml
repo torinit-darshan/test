@@ -9,6 +9,9 @@ jobs:
   cypress-tests:
     runs-on: ubuntu-latest
     environment: dev
+    env:
+      CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
+      CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
 
     steps:
       - name: Checkout Repository
