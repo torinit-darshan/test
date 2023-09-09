@@ -3,16 +3,26 @@ name: Tests
 on:
   pull_request:
     branches:
-      - staging
       - test
 
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
+    environment: dev
+    env:
+      REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
+      CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
+      CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+      
+      - name: Use variables
+        run: |
+          echo "CYPRESS_BASE_URL : $CYPRESS_BASE_URL"
+          echo "CYPRESS_TEST_ENV : $CYPRESS_TEST_ENV"
+          echo "REACT_APP_HEAD_TEXT : $REACT_APP_HEAD_TEXT"
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
