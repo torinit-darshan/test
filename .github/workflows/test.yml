@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: dev
     env:
+      REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
       CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
       CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
 
