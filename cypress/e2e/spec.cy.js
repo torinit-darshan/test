@@ -10,4 +10,9 @@ describe("template spec", () => {
         : "";
     cy.get("h1#head-text").contains(headText);
   });
+
+  it("fail", () => {
+    cy.visit("/");
+    cy.get("h1#head-text").contains("FailHeadText");
+  });
 });
