@@ -34,3 +34,8 @@ jobs:
           start: npm run start:ga
           command: npm run cypress:run:ga
           wait-on: "http://localhost:3000"
+
+      - name: Publish test results
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: cypress/reports/html
