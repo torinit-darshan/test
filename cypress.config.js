@@ -3,7 +3,9 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    reportPageTitle: 'App Tests Report',
+    reportTitle: 'App Tests Report',
+    reportPageTitle: 'Sample Tests Report',
+    videoOnFailOnly: true,
   },
   e2e: {
     setupNodeEvents(on, config) {
