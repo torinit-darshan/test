@@ -37,7 +37,6 @@ jobs:
 
       - name: Publish test results
         if: ${{ always() }}
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: rossjrw/pr-preview-action@v1
         with:
-          folder: cypress/reports/html
-          target-folder: ${{ github.event.number }}
+          source-dir: cypress/reports/html
