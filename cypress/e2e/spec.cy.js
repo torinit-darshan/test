@@ -1,5 +1,5 @@
 describe("template spec", () => {
-  it("passes", () => {
+  it("Passing Test", () => {
     cy.visit("/");
     const testenv = Cypress.env("testenv");
     const headText =
