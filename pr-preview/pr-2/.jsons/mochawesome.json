@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-30T17:57:22.597Z",
-    "end": "2023-09-30T17:57:33.723Z",
-    "duration": 11126,
+    "start": "2023-09-30T18:01:06.430Z",
+    "end": "2023-09-30T18:01:17.255Z",
+    "duration": 10825,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "25bce78b-edc4-4133-8e71-b605a6d34ccc",
+      "uuid": "c5e0bdcf-9798-46f5-a8d2-542833d0aae9",
       "title": "",
       "fullFile": "cypress/e2e/spec.cy.js",
       "file": "cypress/e2e/spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6db0f218-7d37-4714-9b58-db0abeae738f",
+          "uuid": "5154467d-904b-4339-9928-32540f5f763c",
           "title": "Template Spec 1",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Passing Test",
               "fullTitle": "Template Spec 1 Passing Test",
               "timedOut": null,
-              "duration": 11025,
+              "duration": 10734,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/spec.cy.js\"\n}",
               "code": "cy.wait(5000);\nsampleTest();",
               "err": {},
-              "uuid": "2ea975bc-5d36-4e6d-8489-5dd832687e2c",
-              "parentUUID": "6db0f218-7d37-4714-9b58-db0abeae738f",
+              "uuid": "f212591d-98fc-42f2-bb5b-10c70f3f6909",
+              "parentUUID": "5154467d-904b-4339-9928-32540f5f763c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2ea975bc-5d36-4e6d-8489-5dd832687e2c"
+            "f212591d-98fc-42f2-bb5b-10c70f3f6909"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11025,
+          "duration": 10734,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

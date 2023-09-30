@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-30T17:57:57.257Z",
-    "end": "2023-09-30T17:58:10.299Z",
-    "duration": 13042,
+    "start": "2023-09-30T18:01:39.574Z",
+    "end": "2023-09-30T18:01:52.300Z",
+    "duration": 12726,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e4cbfa10-ddd6-4f75-8d74-4dec849c6a23",
+      "uuid": "f5dfc069-ce38-45ec-ae25-50e06e75bf78",
       "title": "",
       "fullFile": "cypress/e2e/spec3.cy.js",
       "file": "cypress/e2e/spec3.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "770bcb8d-4dc0-44d4-816c-4609f91d7360",
+          "uuid": "375c2139-43c7-48e8-a37b-4d84d9a23174",
           "title": "Template Spec 3",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Passing Test",
               "fullTitle": "Template Spec 3 Passing Test",
               "timedOut": null,
-              "duration": 12933,
+              "duration": 12648,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/e2e/spec3.cy.js\"\n}",
               "code": "cy.wait(7000);\nsampleTest();",
               "err": {},
-              "uuid": "b17e2fb8-5cd2-4ebe-9a0d-75a956eed4fd",
-              "parentUUID": "770bcb8d-4dc0-44d4-816c-4609f91d7360",
+              "uuid": "5d65696f-9c32-4f77-b6ed-88a836e87a42",
+              "parentUUID": "375c2139-43c7-48e8-a37b-4d84d9a23174",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b17e2fb8-5cd2-4ebe-9a0d-75a956eed4fd"
+            "5d65696f-9c32-4f77-b6ed-88a836e87a42"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 12933,
+          "duration": 12648,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
