@@ -1,4 +1,4 @@
-name: Tests
+name: Tests - Dev
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
       - test
 
 jobs:
-  cypress-tests:
+  cypress-tests-dev:
     uses: ./.github/workflows/test.yml
     with:
       envName: dev

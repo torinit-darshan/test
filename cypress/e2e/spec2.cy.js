@@ -1,8 +1,8 @@
 const { sampleTest } = require("../support/utils");
 
-describe("Template Spec 1", () => {
+describe("Template Spec 2", () => {
   it("Passing Test", () => {
-    cy.wait(5000);
+    cy.wait(10000);
     sampleTest();
   });
 });

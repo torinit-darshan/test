@@ -1,0 +1,21 @@
+name: Tests - Split
+
+on:
+  pull_request:
+    branches:
+      - staging
+
+env:
+  REACT_APP_HEAD_TEXT: StagingBranch
+  CYPRESS_BASE_URL: http://localhost:3000/
+  CYPRESS_TEST_ENV: stage
+
+jobs:
+  cypress-tests-split:
+    uses: ./.github/workflows/split.yml
+    with:
+      nE2E: 3
+      start: npm run start:ga
+      wait-on: "http://localhost:3000"
+      wait-on-timeout: 120
+      marge: true
