@@ -1,0 +1,12 @@
+name: Tests - Staging
+
+on:
+  pull_request:
+    branches:
+      - staging
+
+jobs:
+  cypress-tests-staging:
+    uses: ./.github/workflows/test.yml
+    with:
+      envName: staging

@@ -1,18 +1,32 @@
-name: Tests
+name: Tests - Reusable
 
 on:
-  pull_request:
-    branches:
-      - staging
-      - test
+  workflow_call:
+    inputs:
+      envName:
+        required: true
+        type: string
+
+env:
+  REACT_APP_HEAD_TEXT: ${{ vars.REACT_APP_HEAD_TEXT }}
+  CYPRESS_BASE_URL: ${{ vars.CYPRESS_BASE_URL }}
+  CYPRESS_TEST_ENV: ${{ vars.CYPRESS_TEST_ENV }}
 
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.envName }}
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      - name: Use variables
+        run: |
+          echo "CYPRESS_BASE_URL : $CYPRESS_BASE_URL"
+          echo "CYPRESS_TEST_ENV : $CYPRESS_TEST_ENV"
+          echo "REACT_APP_HEAD_TEXT : $REACT_APP_HEAD_TEXT"
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
@@ -20,3 +34,9 @@ jobs:
           start: npm run start:ga
           command: npm run cypress:run:ga
           wait-on: "http://localhost:3000"
+
+      - name: Publish test results
+        if: ${{ always() }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: cypress/results

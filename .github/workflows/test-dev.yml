@@ -1,0 +1,12 @@
+name: Tests - Dev
+
+on:
+  pull_request:
+    branches:
+      - test
+
+jobs:
+  cypress-tests-dev:
+    uses: ./.github/workflows/test.yml
+    with:
+      envName: dev
